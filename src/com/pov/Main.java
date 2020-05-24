@@ -7,6 +7,9 @@ import com.pov.structual_patterns.adapter.AdvancedPaymentGatewayAdapter;
 import com.pov.structual_patterns.adapter.PaymentGateway;
 import com.pov.structual_patterns.adapter.PaymentGatewayImp;
 import com.pov.structual_patterns.bridge.*;
+import com.pov.structual_patterns.composite.CompositeBankAccount;
+import com.pov.structual_patterns.composite.CurrentAccount;
+import com.pov.structual_patterns.composite.SavingAccount;
 
 public class Main {
 
@@ -73,6 +76,21 @@ public class Main {
         String mobile2 = null;
         advancedPayGateway.makePayment(mobile1, mobile2);
         */
+
+       // Проверка работы Мост Bridge
+        /*
+       IciciBank iciciBank = new IciciBank(new CurrentAccount());
+       Account current = iciciBank.openAccount();
+       current.accountType();
+       */
+
+        // Проверка работы Composite
+        SavingAccount savingAccount = new SavingAccount();
+        CurrentAccount currentAccount = new CurrentAccount();
+        CompositeBankAccount compositeBankAccount = new CompositeBankAccount();
+        compositeBankAccount.add(savingAccount);
+        compositeBankAccount.add(currentAccount);
+        compositeBankAccount.accountType();
 
 
 
