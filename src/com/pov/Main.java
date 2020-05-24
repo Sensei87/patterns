@@ -1,12 +1,12 @@
 package com.pov;
 
-import com.pov.builder.Account;
 import com.pov.factory.AccountFactory;
 import com.pov.prototype.AccountCache;
 import com.pov.structual_patterns.adapter.AdvancedPayGateway;
 import com.pov.structual_patterns.adapter.AdvancedPaymentGatewayAdapter;
 import com.pov.structual_patterns.adapter.PaymentGateway;
 import com.pov.structual_patterns.adapter.PaymentGatewayImp;
+import com.pov.structual_patterns.bridge.*;
 
 public class Main {
 
@@ -67,11 +67,15 @@ public class Main {
         // ==================================================================
         // Structure Patterns
         // Проверка работы Адаптера Adapter
-        PaymentGateway paymentGateway = new PaymentGatewayImp();
+       /* PaymentGateway paymentGateway = new PaymentGatewayImp();
         AdvancedPayGateway advancedPayGateway = new AdvancedPaymentGatewayAdapter(paymentGateway);
         String mobile1 = null;
         String mobile2 = null;
         advancedPayGateway.makePayment(mobile1, mobile2);
+        */
+
+
+
 
     }
 }
