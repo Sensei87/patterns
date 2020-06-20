@@ -9,7 +9,10 @@ import com.pov.structual_patterns.adapter.PaymentGatewayImp;
 import com.pov.structual_patterns.bridge.*;
 import com.pov.structual_patterns.composite.CompositeBankAccount;
 import com.pov.structual_patterns.composite.CurrentAccount;
-import com.pov.structual_patterns.composite.SavingAccount;
+import com.pov.structual_patterns.decorator.Account;
+import com.pov.structual_patterns.decorator.Privilege;
+import com.pov.structual_patterns.decorator.SavingAccount;
+import com.pov.structual_patterns.decorator.SeniorCitizen;
 
 public class Main {
 
@@ -85,6 +88,7 @@ public class Main {
        */
 
         // Проверка работы Composite
+        /*
         SavingAccount savingAccount = new SavingAccount();
         CurrentAccount currentAccount = new CurrentAccount();
         CompositeBankAccount compositeBankAccount = new CompositeBankAccount();
@@ -92,6 +96,20 @@ public class Main {
         compositeBankAccount.add(currentAccount);
         compositeBankAccount.accountType();
 
+         */
+
+        // Проверка работы Decorator(Wrapper)
+        /*
+        Account basicSavingAccount = new SavingAccount();
+        System.out.println(basicSavingAccount.getTotalBenefits());
+        Account seniorCitizenSavingAccount = new SavingAccount();
+        seniorCitizenSavingAccount = new SeniorCitizen(seniorCitizenSavingAccount);
+        System.out.println(seniorCitizenSavingAccount.getTotalBenefits());
+
+        Account privilegeCitizenSavingAccount = new SavingAccount();
+        privilegeCitizenSavingAccount = new Privilege(privilegeCitizenSavingAccount);
+        System.out.println(privilegeCitizenSavingAccount.getTotalBenefits());
+           */
 
 
 
