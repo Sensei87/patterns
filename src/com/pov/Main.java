@@ -122,8 +122,11 @@ public class Main {
 */
 
          // Проверка работы Proxy
+        /*
         Account account = new ProxySavingAccount();
         account.accountType();
+*/
+
 
     }
 }
