@@ -9,12 +9,13 @@ import com.pov.structual_patterns.adapter.PaymentGatewayImp;
 import com.pov.structual_patterns.bridge.*;
 import com.pov.structual_patterns.composite.CompositeBankAccount;
 import com.pov.structual_patterns.composite.CurrentAccount;
-import com.pov.structual_patterns.decorator.Account;
 import com.pov.structual_patterns.decorator.Privilege;
 import com.pov.structual_patterns.decorator.SavingAccount;
 import com.pov.structual_patterns.decorator.SeniorCitizen;
 import com.pov.structual_patterns.facade.BankingServiceFacade;
 import com.pov.structual_patterns.facade.BankingServiceFacadeImpl;
+import com.pov.structual_patterns.proxy.Account;
+import com.pov.structual_patterns.proxy.ProxySavingAccount;
 
 public class Main {
 
@@ -120,7 +121,9 @@ public class Main {
         serviceFacade.moneyTransfer();
 */
 
-
+         // Проверка работы Proxy
+        Account account = new ProxySavingAccount();
+        account.accountType();
 
     }
 }
