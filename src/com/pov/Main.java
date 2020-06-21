@@ -13,6 +13,8 @@ import com.pov.structual_patterns.decorator.Account;
 import com.pov.structual_patterns.decorator.Privilege;
 import com.pov.structual_patterns.decorator.SavingAccount;
 import com.pov.structual_patterns.decorator.SeniorCitizen;
+import com.pov.structual_patterns.facade.BankingServiceFacade;
+import com.pov.structual_patterns.facade.BankingServiceFacadeImpl;
 
 public class Main {
 
@@ -110,6 +112,13 @@ public class Main {
         privilegeCitizenSavingAccount = new Privilege(privilegeCitizenSavingAccount);
         System.out.println(privilegeCitizenSavingAccount.getTotalBenefits());
            */
+
+
+        // Проверка работы Facade
+/*
+        BankingServiceFacade serviceFacade = new BankingServiceFacadeImpl();
+        serviceFacade.moneyTransfer();
+*/
 
 
 
